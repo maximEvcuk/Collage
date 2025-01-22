@@ -2,6 +2,7 @@
 #include <vector>
 #include "Contact.h"
 #include "Collage.h"
+#include "Student.h"
 
 
 int main() {
@@ -12,8 +13,9 @@ int main() {
 	std::vector <Contact> contacts = { contact1, contact2 };
 	College college1(contacts, "National University");
 
-
+	Student  student1("Ivan Ivanov", "01-01-2000", contact1, college1);
 	
+	student1.Show();
  
 	return 0;
 }
