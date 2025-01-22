@@ -1,18 +1,18 @@
 #ifndef COLLEGE_H
 #define COLLEGE_H
 
-#include <string>
 #include <vector>
-#include<iostream>
+#include <iostream>
 #include "Contact.h"
 
 class College {
 private:
 	std::vector <Contact> contacts;
-	std::string name;
+	char* name;
 
 public:
-	College(const std::vector<Contact>& contacts, const std::string& name);
+	College(const std::vector<Contact>& contacts, const char* name);
+	~College();
 	void Show() const;
 
 };

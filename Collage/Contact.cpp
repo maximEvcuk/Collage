@@ -1,6 +1,23 @@
 #include "Contact.h"
+#include <cstring>
 
-Contact::Contact(const std::string& phone, const std::string& city, const std::string& country) : phone(phone), city(city), country(country) {}
+Contact::Contact(const char* phone, const char* city, const char* country) {
+	
+	this->phone = new char[strlen(phone) + 1];
+	strcpy(this->phone, phone);
+
+	this->city = new char[strlen(city) + 1];
+	strcpy(this->city, city);
+
+	this->country = new char[strlen(country) + 1];
+	strcpy(this->country, country);
+}
+
+Contact::~Contact() {
+	delete[] phone;
+	delete[] city;
+	delete[] country;
+}
 
 void Contact::Show() const {
 	std::cout << "Phone: " << phone << ", City: " << city << ", Country: " << country << std::endl;

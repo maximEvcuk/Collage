@@ -1,6 +1,14 @@
-#include"Collage.h"
+#include "Collage.h"
+#include <cstring>
+ 
+College::College(const std::vector<Contact>& contacts, const char* name) : contacts(contacts) {
+    this->name = new char[strlen(name) + 1];
+	strcpy(this->name, name);
+}
 
-College::College(const std::vector<Contact>& contacts, const std::string& name) : contacts(contacts), name(name) {}
+College::~College() {
+	delete[] name;
+}
 
 void College::Show() const {
     std::cout << "College Name: " << name << std::endl;

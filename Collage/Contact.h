@@ -2,17 +2,18 @@
 #define CONTACT_H
 
 #include <iostream>
-#include <string>
+#include <cstring>
 
 class Contact {
 private:
-	std::string phone;
-	std::string city;
-	std::string country;
+	char* phone;
+	char* city;
+	char* country;
 
 public:
-	Contact(const std::string& phone, const std::string& city, const std::string& country);
+	Contact(const char* phone, const char* city, const char* country);
 	void Show() const;
+	~Contact();
 };
 
 #endif // CONTACT_H
