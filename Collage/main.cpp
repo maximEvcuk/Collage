@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include "Contact.h"
+#include "Collage.h"
+
 
 int main() {
 
@@ -8,6 +10,7 @@ int main() {
 	Contact contact2("123-456-0987", "Lviv", "Ukraine");
 
 	std::vector <Contact> contacts = { contact1, contact2 };
+	College college1(contacts, "National University");
 
 
 	
