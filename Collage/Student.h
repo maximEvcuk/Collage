@@ -4,17 +4,20 @@
 #include <iostream>
 #include "Contact.h"
 #include "Collage.h"
-
+#include "String.h"
+ 
 class Student {
 private:
-    char* fullName;
-    char* birthDate;
+    String fullName;
+    String birthDate;
     Contact contact;
     College college;
 
 public:
-    Student(const char* fullName, const char* birthDate, const Contact& contact, const College& college);
-    ~Student();
+    Student(const String& fullName, const String& birthDate, const Contact& contact, const College& college);
+    
+    
+    ~Student() = default;
     void Show() const;
 
 };
