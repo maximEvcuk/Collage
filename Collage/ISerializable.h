@@ -1,8 +1,12 @@
 #ifndef ISERIALIZABLE_H
 #define ISERIALIZABLE_H
 
+#include"Student.h"
+#include"Collage.h"
+#include"Contact.h"
 #include <iostream>
 #include <string>
+#include<vector>
 
 class ISerializable {
 public:
@@ -15,5 +19,6 @@ public:
     virtual ~ISerializable() = default;
 
 };
+#include "ISerializable.cpp"
 
 #endif // ISERIALIZABLE_H
