@@ -4,6 +4,7 @@
 #include"Student.h"
 #include"Collage.h"
 #include"Contact.h"
+#include"String.h"
 #include <iostream>
 #include <string>
 #include<vector>

@@ -3,7 +3,7 @@
 
 #include "ISerializable.h"
 
-class Student {
+class Student : public ISerializable {
 private:
     String fullName;
     String birthDate;
@@ -18,6 +18,47 @@ public:
 
     ~Student() = default;
     void Show() const;
+
+    std::ostream& Serialize(std::ostream& output) override {
+        output << fullName << "\n" << birthDate << "\n";
+        contact.Serialize(output);
+        college.Serialize(output);
+        return output;
+    }
+
+    std::istream& Deserialize(std::istream& input) override {
+        input >> fullName >> birthDate;
+        contact.Deserialize(input);
+        college.Deserialize(input);
+        return input;
+
+    }
+
+    std::ostream& Serialize(std::string& path) override {
+        std::ofstream file(path);
+        if (file.is_open()) {
+            return Serialize(file);
+        }
+        return std::cout;
+    }
+
+    std::istream& Deserialize(std::string& path) override {
+        std::ifstream file(path);
+        if (file.is_open()) {
+            return Deserialize(file);
+        }
+        return std::cin;
+
+    }
+
+    std::ostream& Serialize() override {
+        return Serialize(std::cout);
+    }
+
+    std::istream& Deserialize() override {
+        return Deserialize(std::cin);
+    }
+
 
 };
 
