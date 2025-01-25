@@ -1,11 +1,8 @@
 #ifndef STUDENT_H
 #define STUDENT_H
 
-#include <iostream>
-#include "Contact.h"
-#include "Collage.h"
-#include "String.h"
- 
+#include "ISerializable.h"
+
 class Student {
 private:
     String fullName;

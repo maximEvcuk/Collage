@@ -1,11 +1,10 @@
 #ifndef COLLEGE_H
 #define COLLEGE_H
 
-#include <vector>
-#include <iostream>
-#include "Contact.h"
+#include "ISerializable.h"
 
-class College {
+
+class College : public ISerializable {
 private:
 	std::vector <Contact> contacts;
 	char* name;

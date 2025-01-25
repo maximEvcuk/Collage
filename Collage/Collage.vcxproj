@@ -129,12 +129,18 @@
   <ItemGroup>
     <ClCompile Include="Collage.cpp" />
     <ClCompile Include="Contact.cpp" />
+    <ClCompile Include="ISerializable.cpp" />
+    <ClCompile Include="main-I.cpp" />
+    <ClCompile Include="main-S.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="String.cpp" />
     <ClCompile Include="Student.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Collage.h" />
     <ClInclude Include="Contact.h" />
+    <ClInclude Include="ISerializable.h" />
+    <ClInclude Include="String.h" />
     <ClInclude Include="Student.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
